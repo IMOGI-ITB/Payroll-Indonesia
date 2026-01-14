@@ -6,26 +6,8 @@ def validate_salary_structure_required_components(doc, method):
     
     missing_components = []
     
-    # Validasi BPJS Kesehatan
-    if "BPJS Kesehatan Employer" in earning_names or "BPJS Kesehatan Employee" in deduction_names:
-        if "BPJS Kesehatan Employer" not in earning_names:
-            missing_components.append("BPJS Kesehatan Employer")
-        if "BPJS Kesehatan Employee" not in deduction_names:
-            missing_components.append("BPJS Kesehatan Employee")
-    
-    # Validasi BPJS JHT
-    if "BPJS JHT Employer" in earning_names or "BPJS JHT Employee" in deduction_names:
-        if "BPJS JHT Employer" not in earning_names:
-            missing_components.append("BPJS JHT Employer")
-        if "BPJS JHT Employee" not in deduction_names:
-            missing_components.append("BPJS JHT Employee")
-    
-    # Validasi BPJS JP
-    if "BPJS JP Employer" in earning_names or "BPJS JP Employee" in deduction_names:
-        if "BPJS JP Employer" not in earning_names:
-            missing_components.append("BPJS JP Employer")
-        if "BPJS JP Employee" not in deduction_names:
-            missing_components.append("BPJS JP Employee")
+    # Komponen BPJS bersifat opsional. Tidak memaksa pasangan employer/employee,
+    # sehingga Salary Structure bisa dibuat secara parsial sesuai kebutuhan.
     
     # Validasi PPh 21 - hanya jika ada komponen taxable
     has_taxable = any(
