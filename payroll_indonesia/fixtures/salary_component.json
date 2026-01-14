@@ -226,7 +226,7 @@
     "amount_based_on_formula": 1,
     "formula": "(base if base >= 5396761 else 5396761) * get_bpjs_rate(\"bpjs_health_employer_rate\") / 100",
     "modified": "2024-01-01 00:00:00"
-}
+  },
   {
     "doctype": "Salary Component",
     "name": "BPJS JHT Employer",
