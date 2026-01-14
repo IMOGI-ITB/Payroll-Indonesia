@@ -314,7 +314,7 @@
     "round_to_the_nearest_integer": 1,
     "disabled": 0,
     "amount_based_on_formula": 1,
-    "formula": "(base if base >= 5396761 else 5396761) * 0.01"
+    "formula": "(base if base >= 5396761 else 5396761) * 0.01",
     "modified": "2024-01-01 00:00:00"
   },
   {
